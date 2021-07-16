@@ -19,7 +19,7 @@ public:
 	const char* GetDLLPath() const { return m_DLLPath; }
 
 private:
-	const char* m_DLLPath = "C:\\Users\\Alex Haurin\\source\\repos\\CSGO_Hack_Interface\\Debug\\DLL\\cheat.dll";
+	const char* m_DLLPath = "C:\\Users\\Alex Haurin\\source\\repos\\CSGO_Hack_Interface\\DLL\\cheat.dll";
 	DWORD m_dwProcessID{};
 	HANDLE m_hGameProcess{};
 	uintptr_t m_moduleBase{};
