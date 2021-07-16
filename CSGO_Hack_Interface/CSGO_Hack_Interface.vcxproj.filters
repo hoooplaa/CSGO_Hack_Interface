@@ -27,49 +27,51 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui_demo.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui_draw.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui_tables.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui_widgets.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui-SFML.cpp">
-      <Filter>Source Files\ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="Injection.cpp">
-      <Filter>Source Files\Injection</Filter>
-    </ClCompile>
-    <ClCompile Include="Injection.h">
-      <Filter>Source Files\Injection</Filter>
-    </ClCompile>
-    <ClCompile Include="WindowsHelper.h">
+    <ClCompile Include="Source\WindowsHelper\WindowsHelper.cpp">
       <Filter>Source Files\Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="WindowsHelper.cpp">
-      <Filter>Source Files\Helpers</Filter>
+    <ClCompile Include="Source\ImGui\imgui.cpp">
+      <Filter>Source Files\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="Interface.cpp">
+    <ClCompile Include="Source\ImGui\imgui_demo.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ImGui\imgui_draw.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ImGui\imgui_tables.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ImGui\imgui_widgets.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ImGui\imgui-SFML.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Interface\Interface.cpp">
       <Filter>Source Files\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Injector\Injector.cpp">
+      <Filter>Source Files\Injection</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Offsets.h">
+    <ClInclude Include="Source\WindowsHelper\WindowsHelper.h">
       <Filter>Source Files\Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="Interface.h">
+    <ClInclude Include="Source\Interface\Interface.h">
       <Filter>Source Files\Interface</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Injector\Injector.h">
+      <Filter>Source Files\Injection</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\ImGui\imgui.ini">
+      <Filter>Source Files\ImGui</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -19,6 +19,14 @@ void Interface::Initialize()
 
 	m_injector.Initialize();
 
+	// Set  m_inputDLLPath to injector's default path
+	if (strlen(m_injector.GetDLLPath()) >= sizeof(m_inputDLLPath)) {
+		assert("DLL path to big");
+	}
+	else {
+		strcpy(m_inputDLLPath, m_injector.GetDLLPath());
+	}
+
 	WriteToConsole("Welcome to the CSGO DLL Injector!");
 	WriteToConsole("Hopefully the slide and shit is working");
 }
@@ -64,6 +72,7 @@ void Interface::HandleEvents() {
 			Destroy();
 			break;
 		case sf::Event::Resized:
+			m_settings.SetWindowDimensions(m_window->getSize());
 			break;
 		case sf::Event::KeyPressed:
 			m_inputState.CheckKeyboardInputs();
@@ -101,6 +110,11 @@ void Interface::Draw()
 	if (ImGui::Button("Inject DLL")) {
 		if (m_injector.InjectDLL()) { WriteToConsole("DLL Succesfully Injected!", ImVec4(0, 1, 0, 1)); }
 		else { WriteToConsole("DLL Injection Failed :(", ImVec4(1, 0, 0, 1)); }
+	}
+
+	if (ImGui::Button("Set CSGO Process")) {
+		if (m_injector.SetProcess("csgo.exe")) { WriteToConsole("CSGO Process Succesfully Set!", ImVec4(0, 1, 0, 1)); }
+		else { WriteToConsole("CSGO Process Not Found", ImVec4(1, 0, 0, 1)); }
 	}
 
 	if (ImGui::Button("Add DLL")) {

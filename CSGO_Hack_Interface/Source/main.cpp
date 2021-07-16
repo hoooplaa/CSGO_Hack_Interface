@@ -15,12 +15,12 @@
 //      2. Think of better way to handle errors
 //
 
-#include "Interface.h"
+#include "Interface/Interface.h"
 
 const std::string DLL_PATH = "DLL/cheats.dll";
 
 int main() {
-	SetConsoleTitleA(RandomString(26).c_str()); // Some anticheats can detetct console titles
+	//SetConsoleTitleA(RandomString(26).c_str()); // Some anticheats can detetct console titles
 
 	std::shared_ptr<Interface> csgoInjector = std::make_shared<Interface>();
 

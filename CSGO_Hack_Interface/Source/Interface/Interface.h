@@ -7,7 +7,7 @@
 #include "ImGui/imgui.h"
 #include "Imgui-SFML/imgui-SFML.h"
 
-#include "Injection.h"
+#include "../Injector/Injector.h"
 
 class Input {
 public:
@@ -44,10 +44,10 @@ public:
 	void SetTargetTime(std::chrono::milliseconds in_targetTime) { m_targetTime = in_targetTime; }
 
 	tVectorU GetWindowDimensions() const { return m_windowDimensions; }
-	void    SetWindowDimensions(tVectorU& in_dimensions) { m_windowDimensions = in_dimensions; }
+	void    SetWindowDimensions(const tVectorU& in_dimensions) { m_windowDimensions = in_dimensions; }
 
 	tString GetWindowTitle() const { return m_windowTitle; }
-	void    SetWindowTitle(tString& in_title) { m_windowTitle = in_title; }
+	void    SetWindowTitle(const tString& in_title) { m_windowTitle = in_title; }
 
 private:
 	double  m_frameRate = 120.0;
@@ -82,7 +82,7 @@ private:
 
 	// ImGui
 	std::vector<std::pair<const char*, ImVec4>> m_consoleOutputs;
-	char m_inputDLLPath[1048] = "DLL\\cheat.dll";
+	char m_inputDLLPath[1048]{};
 
 	// Injector
 	Injector m_injector;

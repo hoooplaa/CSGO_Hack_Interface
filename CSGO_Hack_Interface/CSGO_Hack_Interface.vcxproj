@@ -157,22 +157,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="imgui-SFML.cpp" />
-    <ClCompile Include="imgui.cpp" />
-    <ClCompile Include="imgui_demo.cpp" />
-    <ClCompile Include="imgui_draw.cpp" />
-    <ClCompile Include="imgui_tables.cpp" />
-    <ClCompile Include="imgui_widgets.cpp" />
-    <ClCompile Include="Injection.cpp" />
-    <ClCompile Include="Injection.h" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Interface.cpp" />
-    <ClCompile Include="WindowsHelper.cpp" />
-    <ClCompile Include="WindowsHelper.h" />
+    <ClCompile Include="Source\ImGui\imgui-SFML.cpp" />
+    <ClCompile Include="Source\ImGui\imgui.cpp" />
+    <ClCompile Include="Source\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Source\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Source\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Source\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Source\Injector\Injector.cpp" />
+    <ClCompile Include="Source\Interface\Interface.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\WindowsHelper\WindowsHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Offsets.h" />
-    <ClInclude Include="Interface.h" />
+    <ClInclude Include="Source\Injector\Injector.h" />
+    <ClInclude Include="Source\Interface\Interface.h" />
+    <ClInclude Include="Source\WindowsHelper\WindowsHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\ImGui\imgui.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
